@@ -1,0 +1,13 @@
+@charset "utf-8";
+:root{
+  --main-color:#0000;
+  --accent-color:rgb(253, 0, 0);
+  --dark-main-color:rgba(176, 247, 10, 0);
+  --text-bright-color:rgba(17, 21, 255, 0);
+  --icon-color:#0000;
+  --icon-bk-color:#ffff;
+  /* 横幅最大値 */
+  --large-width:1000px;
+
+
+}
