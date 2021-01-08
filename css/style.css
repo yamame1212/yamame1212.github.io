@@ -1,13 +1,355 @@
 @charset "utf-8";
-:root{
-  --main-color:#0000;
-  --accent-color:rgb(253, 0, 0);
-  --dark-main-color:rgba(176, 247, 10, 0);
-  --text-bright-color:rgba(17, 21, 255, 0);
-  --icon-color:#0000;
-  --icon-bk-color:#ffff;
-  /* 横幅最大値 */
-  --large-width:1000px;
+:root {
+    /* ベースカラー */
+    --color1: #a8a8a8;
+    /* ブロックカラー１ */
+    --color2: rgba(0,0,0,0.5);
+    /* ブロックカラー２ */
+    --color3: rgba(0,0,0,0.3);
+    /* ボタンカラー */
+    --color4: rgba(0,0,255,0.5);
+    /* アニメーションーカラー */
+    --color5: rgba(255, 0, 0,0.5);
+    /* 使用例
+    color: var(--color1); */
+    
+    /* 間隔 */
+    --interval:20px;
+
+}
 
 
+
+
+/* 全体 */
+html{
+    font-family: sans-serif;
+}
+header, main, footer{
+    margin-bottom:var(--interval);    
+}
+/* --------------------- */
+/* body */
+/* --------------------- */
+.container{
+    max-width: 960px;
+    min-width: 600px; 
+    height: auto;
+    margin: 0 auto;      
+    background-color:var(--color1);
+    padding:var(--interval);        
+}
+
+/* --------------------- */
+/* heder */
+/* --------------------- */
+.head1{
+    width: 100%;
+    height: 100px;    
+    background-color:var(--color2);
+    margin-bottom: var(--interval);
+}
+.anime1{
+    display:inline-block;
+    width: 50px;
+    height: 50px;
+    background-color: var(--color5);
+}
+nav{
+    display: flex;
+    /* 水平方向 並び*/
+    justify-content:center;
+    /* 垂直方向　並び */
+    align-items:center;
+    width: 100%;
+    height: 50px;    
+    background-color:var(--color3);    
+}
+.nav_btn{
+    /* display: flex; */
+    display: inline-block;
+    width: 80px;
+    height: 30px;
+    background-color:var(--color4);    
+    margin-left: var(--interval);
+    margin-right: var(--interval);
+}
+
+/* --------------------- */
+/* main */
+/* --------------------- */
+.content_all{
+    display: flex;
+    width: 100%;
+    height: auto;    
+    background-color:var(--color1);
+}
+
+/* --------------------- */
+/* テスト コンテンツ左の高さ固定にする*/ 
+/* --------------------- */
+/* .content_test{
+    flex: 3;  
+    height: 800px; 
+    padding:70px 0;
+    background-color:var(--color5);    
+}
+.box_test{
+    width: 300px;
+    height: 300px;
+    background-color:var(--color4);
+    margin:var(--interval) auto;   
+} */
+/* ここまで--------------------- */
+
+
+
+.content_left{
+    position: relative;
+    flex: 3;
+    width: 100%;
+    /* height: auto; */
+    background-color:var(--color2);  
+    
+}
+/*posisionで上下左右　中央にするための設定*/
+.content_left .box{
+    position: absolute;
+    width: 300px;
+    padding-top: var(--interval);
+    top: 50%;
+    left: 50%;
+    -webkit-transform : translate(-50%,-50%);
+    transform : translate(-50%,-50%);
+    text-align: center;
+}
+.content_left .boxA{   
+    display: inline-block;      
+    width: 300px;
+    height: 300px;
+    background-color:var(--color4);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: var(--interval);    
+}
+.content_right{
+    flex: 2;
+    width: 100%;
+    height: auto;
+    background-color:var(--color3);
+    padding-top: var(--interval);
+}
+.content_right .boxB{
+    width: 200px;
+    height: 100px;
+    margin-bottom: var(--interval);
+    margin-left: auto;
+    margin-right: auto;
+    background-color:var(--color4);
+    
+}
+
+/* --------------------- */
+/* footer */
+/* --------------------- */
+.foot{
+    position: relative;
+    width: 100%;
+    height: 100px;
+    background-color:var(--color3);    
+}
+.boxC{
+    position: absolute;
+    /* display: inline-block; */    
+    width: 300px;
+    height: 30px;
+    /* margin:auto;     */
+    background-color:var(--color4);
+    /*上下左右　中央にするための設定  posisionと一緒に使用する*/
+    bottom:5px;
+    left: 50%;
+    -webkit-transform : translate(-50%,-50%);
+    transform : translate(-50%,-50%);
+    text-align: center;     
+}
+
+
+/* --------------------- */
+/* withが500以下の時 */
+/* --------------------- */
+@media(max-width:500px){
+    .container{
+        min-width:360px;
+    }
+    /* ナビボタン縦並び */
+    nav{
+        display: inline-block;
+        height: 100%;
+    padding-top:3px;    
+}
+/* ボタン横長 */
+.nav_btn{    
+    margin-bottom: 3px;
+    width: 90%;    
+}
+/* コンテンツ縦並び */
+.content_all{
+    display: block;
+}
+.content_left{
+    position: static;
+    display: flex;
+    width: 100%;        
+    height: auto;
+    background-color:var(--color2);  
+    
+}
+.content_left .box{
+    position: static;
+    width: 300px;
+    padding-top: var(--interval);
+    transform : none;
+    margin: 0 auto;
+    /* top: 50%;
+    left: 50%;
+    -webkit-transform : translate(-50%,-50%);
+    text-align: center; */
+}
+
+.content_right{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    background-color:var(--color3);
+    padding-top: var(--interval);
+}
+.content_right .boxB{
+    width: 200px;
+    height: 100px;
+    margin-bottom: var(--interval);   
+}
+.foot{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+.boxC{
+    position:static;  
+    transform: none;    
+    bottom:18%;
+}
+
+/* --------------------- */
+/* テスト　コンテンツ左の高さ固定*/
+/* --------------------- */
+/* .box_test{
+    margin:20px auto;   
+} */
+/* ここまで--------------------- */
+
+} 
+
+/* -------------------------------- */
+/* -アニメーション--transition使用-- */
+/* -------------------------------- */
+/* 色変更 */
+.nav_btn{
+    transition: background-color 0.5s ease 0s;
+}
+.nav_btn:hover{
+    background-color:var(--color5);
+}
+
+/* 影 */
+.boxA{
+    transition: box-shadow 0.2s ease 0s;
+}
+.boxA:hover{
+    box-shadow:10px 7px 0px 3px var(--color5);
+}
+
+/* 伸びる（横） */
+.boxB{
+    transition: width 0.2s ease 0s;
+}
+.boxB:hover{
+    width:220px ;
+}
+
+/* 線 　*/
+.boxC{
+    transition: border 0.2s ease 0s;
+  }
+.boxC:hover{
+    border: 5px solid var(--color5);
+}
+
+
+/* -アニメーション--animation使用-- */
+/* キーフレーム名 　かかる時間　速度　何秒後に表示するか　回数・ループ指定　再生する方向　アニメーション前後のプロパティ　一時停止・再生の指定　アニメーション変化の指定*/
+/* 下から登場 */
+.head1{
+    opacity:0;
+    animation:head1 2.5s 0.5s 1 forwards;
+    -webkit-animation:head1 2.5s 0.5s 1 forwards;
+    -moz-animation:head1 2.5s 0.5s 1 forwards;
+  }
+  @keyframes head1{
+      0%{opacity:0; transform:translate(0,200px);}
+      10%{opacity:1; transform:translate(0,-50px);}
+    15%{opacity:1; transform:translate(0,0px);}
+    20%{opacity:1; transform:translate(0,-20px);}
+    25%{opacity:1; transform:translate(0,0px);}
+    100%{opacity:1; transform:translate(0,0px);}
+  }
+  @-webkit-keyframes head1{
+    0%{opacity:0; -webkit-transform:translate(0,200px);}
+    10%{opacity:1; -webkit-transform:translate(0,-50px);}
+    15%{opacity:1; -webkit-transform:translate(0,0px);}
+    20%{opacity:1; -webkit-transform:translate(0,-20px);}
+    25%{opacity:1; -webkit-transform:translate(0,0px);}
+    100%{opacity:1; -webkit-transform:translate(0,0px);}
+  }
+  @-moz-keyframes head1{
+    0%{opacity:0; -moz-transform:translate(0,200px);}
+    10%{opacity:1; -moz-transform:translate(0,-50px);}
+    15%{opacity:1; -moz-transform:translate(0,0px);}
+    20%{opacity:1; -moz-transform:translate(0,-20px);}
+    25%{opacity:1; -moz-transform:translate(0,0px);}
+    100%{opacity:1; -moz-transform:translate(0,0px);}
+  }
+  
+/****--------- 回転 ---------****/
+.anime1{
+    animation: anime1 10s linear infinite alternate;
+    -webkit-animation: anime1 10s linear infinite alternate;
+    -moz-animation: anime1 10s linear infinite alternate;
+  }
+  @keyframes anime1{
+      0%   { 
+          transform: rotate(0deg);
+          margin-left: 0px;
+          margin-top:2px;
+        }
+        50%   { 
+            transform: rotate(180deg);
+            margin-left: 400px;
+            margin-top: 48px;        
+        }
+        100% { 
+            transform: rotate(360deg);
+            margin-left: 800px;
+            margin-top: 2px; 
+        }
+    }
+  @-webkit-keyframes anime1{
+    0%   { -webkit-transform: rotate(0deg); }
+    50%   { -webkit-transform: rotate(180deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+  @-moz-keyframes anime1{
+      0%   { -moz-transform: rotate(0deg); }
+      50%   { -moz-transform: rotate(180deg); }
+      100% { -moz-transform: rotate(360deg); }
 }
