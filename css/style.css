@@ -19,25 +19,20 @@
 }
 
 
-
-
 /* 全体 */
 html{
     font-family: sans-serif;
 }
 header, main, footer{
-    margin-bottom:var(--interval);    
+    margin-bottom: var(--interval);    
 }
 /* --------------------- */
 /* body */
 /* --------------------- */
 .container{
-    max-width: 960px;
-    min-width: 600px; 
-    height: auto;
-    margin: 0 auto;      
+    width: 960px;
     background-color:var(--color1);
-    padding:var(--interval);        
+    padding:30px;        
 }
 
 /* --------------------- */
@@ -59,122 +54,71 @@ header, main, footer{
 }
 nav{
     display: flex;
-    /* 水平方向 並び*/
-    justify-content:center;
-    /* 垂直方向　並び */
-    align-items:center;
-    /* width: 100%; */
+    justify-content: space-around;
+    align-items: center;
     /* 横幅固定に変更する */
     width: 900px;
     height: 50px;    
-    background-color:var(--color3);    
+    background-color:var(--color3);
 }
 .nav_btn{
-    /* display: flex; */
-    display: inline-block;
-    width: 80px;
+    width: 80px;    
     height: 30px;
     background-color:var(--color4);    
-    margin-left: var(--interval);
-    margin-right: var(--interval);
 }
 
-/* --------------------- */
+/* --------------------- *      /
 /* main */
 /* --------------------- */
 .content_all{
     display: flex;
-    width: 100%;
+    width: 900px;
     height: auto;    
     background-color:var(--color1);
 }
 
-/* --------------------- */
-/* テスト コンテンツ左の高さ固定にする*/ 
-/* --------------------- */
-/* .content_test{
-    flex: 3;  
-    height: 800px; 
-    padding:70px 0;
-    background-color:var(--color5);    
-}
-.box_test{
-    width: 300px;
-    height: 300px;
-    background-color:var(--color4);
-    margin:var(--interval) auto;   
-} */
-/* ここまで--------------------- */
-
-
-
 .content_left{
-    position: relative;
     flex: 3;
-    width: 100%;
+    height: 900px;
     /* height: auto; */
     background-color:var(--color2);  
     
 }
-/*posisionで上下左右　中央にするための設定*/
-.content_left .box{
-    position: absolute;
-    width: 300px;
-    padding-top: var(--interval);
-    top: 50%;
-    left: 50%;
-    -webkit-transform : translate(-50%,-50%);
-    transform : translate(-50%,-50%);
-    text-align: center;
-}
 .content_left .boxA{   
-    display: inline-block;      
     width: 300px;
     height: 300px;
     background-color:var(--color4);
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: var(--interval);    
+    margin: 100px auto;
 }
 .content_right{
     flex: 2;
-    width: 100%;
-    height: auto;
+    height: 900px;
     background-color:var(--color3);
-    padding-top: var(--interval);
+    /* padding-top: var(--interval); */
 }
 .content_right .boxB{
     width: 200px;
     height: 100px;
-    margin-bottom: var(--interval);
-    margin-left: auto;
-    margin-right: auto;
     background-color:var(--color4);
-    
+    margin:42px auto;
 }
 
 /* --------------------- */
 /* footer */
 /* --------------------- */
 .foot{
-    position: relative;
-    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    width: 900px;
     height: 100px;
     background-color:var(--color3);    
 }
 .boxC{
-    position: absolute;
-    /* display: inline-block; */    
     width: 300px;
     height: 30px;
-    /* margin:auto;     */
+    margin-bottom:10px;    
     background-color:var(--color4);
-    /*上下左右　中央にするための設定  posisionと一緒に使用する*/
-    bottom:5px;
-    left: 50%;
-    -webkit-transform : translate(-50%,-50%);
-    transform : translate(-50%,-50%);
-    text-align: center;     
 }
 
 
@@ -182,75 +126,55 @@ nav{
 /* withが500以下の時 */
 /* --------------------- */
 @media(max-width:500px){
-    .container{
-        min-width:360px;
-    }
-    /* ナビボタン縦並び */
-    nav{
-        display: inline-block;
-        height: 100%;
-    padding-top:3px;    
+.container{
+    width:500px;
 }
-/* ボタン横長 */
+.head1{
+    width: 100%;
+}
+nav{
+    display:block;
+    width: 100%;
+    height: 100%;
+    padding:var(--interval);
+}
 .nav_btn{    
-    margin-bottom: 3px;
-    width: 90%;    
+    margin: 1px auto;
+    width: 300px;
 }
-/* コンテンツ縦並び */
+/* コンテンツ並び */
 .content_all{
     display: block;
+    width: 100%;
 }
 .content_left{
-    position: static;
-    display: flex;
-    width: 100%;        
-    height: auto;
+    display:block;
+    width: 100%;
     background-color:var(--color2);  
-    
+    padding:var(--interval);    
 }
-.content_left .box{
-    position: static;
-    width: 300px;
-    padding-top: var(--interval);
-    transform : none;
-    margin: 0 auto;
-    /* top: 50%;
-    left: 50%;
-    -webkit-transform : translate(-50%,-50%);
-    text-align: center; */
+.content_left .boxA{
+    padding: 0;
+    margin: 85px 50px;
 }
-
 .content_right{
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
     width: 100%;
-    height: auto;
+    height: 100%;
     background-color:var(--color3);
-    padding-top: var(--interval);
 }
 .content_right .boxB{
     width: 200px;
     height: 100px;
-    margin-bottom: var(--interval);   
+    margin: 5px;
 }
 .foot{
-    display: flex;
-    justify-content:center;
-    align-items:center;
+    width:100%;
+    align-items: center;
 }
-.boxC{
-    position:static;  
-    transform: none;    
-    bottom:18%;
-}
-
-/* --------------------- */
-/* テスト　コンテンツ左の高さ固定*/
-/* --------------------- */
-/* .box_test{
-    margin:20px auto;   
-} */
-/* ここまで--------------------- */
 
 } 
 
