@@ -434,7 +434,7 @@ footer{
     top:70px;    
     width: 100%;
     text-align: center;    
- font-size: small;
+    font-size: small;
 } 
 
 /* フッターの処理ここまで */
@@ -729,6 +729,11 @@ td{
     .kyevisual{        
         margin-bottom: 50px;     
     }
+
+    .copyright{
+        font-size: x-small;
+    }
+
 
       /* バーガーボタンの表示 */
     .btn {
