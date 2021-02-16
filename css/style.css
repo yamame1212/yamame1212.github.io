@@ -518,9 +518,11 @@ margin-bottom: var(--space1);
     display: flex;    
     justify-content: center;  
     margin-bottom: var(--space1);
-    height: 200px; 
+    background-color: red;
 }
-
+.accessImg img{
+   width: 30%;
+}
 /* ------------------------------------------- */
 /*  予約　　　　　　　　　　　　　　　　　　　　　 */
 /* ------------------------------------------- */
@@ -916,6 +918,13 @@ td{
         margin: 0 auto;
     }
     
+    /* ----------------------------------- */
+    /* アクセス　                              */
+    /* ----------------------------------- */
+
+    .accessImg img{
+        width: 60%;
+     }
     
     /* ----------------------------------- */
     /* 予約　                              */
