@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="金沢の伝統を使う、贈る、作る。九谷焼のデザインアートを体験することができます。金沢のおみやげや思い出作りにも。">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="email=no,telephone=no,address=no">
+    <title>KUTANI Art Plan</title>
+    <link rel="stylesheet" type="text/css" href="../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/reserve.css">
+    <!-- Datepicker -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css">
+    <!-- Datetimepicker -->
+    <!-- <link rel="stylesheet" type="text/css" href="../css/datetimepicker.css"/ > -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <!-- Datepicker -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <!-- Datetimepicker -->
+    <!-- <script src="../js/datetimepicker.js"></script> -->
+    <script src="../js/javascript.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="headArea">
+                <div class="headlogoArea">
+                    <img class="headlogoP" src="../images/logo.svg">
+                    <p class="headlogoT">KUTANI Art Plan</p>
+                </div>
+
+                <button type="button" class="btn js-btn">
+                    <span class="btn-line"></span>
+                </button>
+                <div class="navArea">
+                    <ul id="navMenu" class="navBoxAll">
+                        <li class="navBox"><a id="nav1" href="../index.html">Home</a></li>
+                        <li class="navBox"><a id="nav2" href="../menu/menu.html">LessonMenu</a></li>
+                        <li class="navBox"><a id="nav3" href="../access/access.html">Access</a></li>
+                        <li class="navBox"><a id="nav4" href="./reserve.html">Reservation</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- パンくずリスト -->
+            <ol class="breadcrumbs">
+                <li><a href="../index.html">■ Home</a></li>
+                <li><a href="./reserve.html">Reservation</a></li>
+            </ol>
+        </header>
+        <main>
+            <div class="content">
+                <section class="courseSelect">
+                    <div class="point">
+                        <p class="colorA">入力</p>
+                        <p class="colorB">確認</p>
+                        <p class="colorB">完了</p>
+                    </div>
+                    <h2>体験メニュー</h2>
+                    <div class="courseList">
+                        <div class="courseSet">
+                            <input id="course1" class="courseInput" type="radio" name="c1" value="">
+                            <label class="course" for="course1">
+                                <P>九谷五彩体験</P>
+                                <img src="../images/blue.jpg">
+                            </label>
+                        </div>
+                        <div class="courseSet">
+                            <input id="course2" class="courseInput" type="radio" name="c1" value="">
+                            <label class="course" for="course2">
+                                <p>赤絵金彩体験</p>
+                                <img src="../images/red3.jpg">
+                            </label>
+                        </div>
+                        <div class="courseSet">
+                            <input id="course3" class="courseInput" type="radio" name="c1" value="">
+                            <label class="course" for="course3">
+                                <P>貼り絵体験</P>
+                                <img src="../images/kutani1.jpg">
+                            </label>
+                        </div>
+                        <div class="courseSet">
+                            <input id="course4" class="courseInput" type="radio" name="c1" value="">
+                            <label class="course" for="course4">
+                                <p>電動ろくろ体験</p>
+                                <img src="../images/rokuro.jpg">
+                            </label>
+                        </div>
+                    </div>
+                </section>
+                <section class="daySelect">
+                    <h2>予約情報</h2>
+                    <div class="yoyakuAll">
+                        <div class="yoyakuBox">
+                            <label class="yoyakulabel" for="datepicker">体験日</label>
+                            <input id="dayS" class="inputBox" type="datetime-local">
+                        </div>
+                        <div class="yoyakuBox">
+                            <label class="yoyakulabel">予約人数</label>
+                            <select id="count" name="count" required class="inputBox numberF">
+                                <option value="">選択してください</option>
+                                <option value="1">1人</option>
+                                <option value="2">2人</option>
+                                <option value="3">3人</option>
+                                <option value="4">4人</option>
+                            </select>
+                        </div>
+                    </div>
+                </section>
+                <section class="customerInfo">
+                    <h2>
+                        お客様情報
+                    </h2>
+
+                    <div class="infoAll">
+                        <table>
+                            <tr>
+                                <td colspan="2">
+                                    <div class="border"></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label>お名前</label>
+                                </td>
+                                <td>
+                                    <div class="nameInfo">
+                                        <div>
+                                            <label>例：姓&emsp;</label>
+                                            <input type="text" id="lastName" name="lastName" class="inputBox">
+
+                                        </div>
+                                        <div>
+
+                                            <label>例：名&emsp;</label>
+                                            <input type="text" id="firstName" name="firstName" class="inputBox">
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <div class="border"></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label>ふりがな</label>
+                                </td>
+                                <td>
+                                    <div class="nameInfo">
+                                        <div>
+                                            <label>例：しめい</label>
+                                            <input type="text" id="lastFurigana" name="lastFurigana" class="inputBox">
+                                        </div>
+                                        <div>
+                                            <label>例：なまえ</label>
+                                            <input type="text" id="firstFurigana" name="firstFurigana" class="inputBox">
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <div class="border"></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label>メールアドレス</label>
+                                </td>
+                                <td>
+                                    <label>例：sample@example.com</label>
+                                    <div class="marginText">
+                                        <input type="email" id="mail" name="mail" class="inputBox">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <div class="border"></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+
+                                    <label>電話番号</label>
+                                </td>
+                                <td>
+                                    <div class="nameInfo">
+
+                                        <label>例：<label class="numberF">0357453977&emsp;</label>
+                                        <div class="marginText">
+                                            
+                                            <input type="text" id="tel" name="tel" class="inputBox marginText">
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <div class="border"></div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="btnAll js-modal-open">
+                        <input id="reserveBtn" class="reserveBtn" type="button" value="次へ  >>"
+                            onclick="location.href='../reserve/confirm.html'">
+                    </div>
+            </div>
+
+        </main>
+        <footer>
+            <div class="footerArea">
+                <div class="footerlogoArea">
+                    <img class="footerlogoP" src="../images/logo.svg">
+                    <p class="footerlogoT">KUTANI Art Plan</p>
+                </div>
+                <div class="copyright">
+                    <p class="numberF">Copyright (C) 2021 KUTANI Art Plan. All Right Reserved.</p>
+                </div>
+            </div>
+        </footer>
+        <!-- トップへ戻る -->
+        <div id="page_top"><a href="#">TOP</a></div>
+    </div>
+</body>
+
+</html>

@@ -1,65 +1,192 @@
 <!DOCTYPE html>
 <html lang="ja">
 
-<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="記事内容100字以内で">
+    <meta name="description" content="金沢の伝統を使う、贈る、作る。九谷焼のデザインアートを体験することができます。金沢のおみやげや思い出作りにも。">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- ogp設定 -->
-    <meta property="og:url" content="https://yamame1212.github.io/">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="コーディング実習">
-    <meta property="og:description" content=" このページはコーティング実習で作成されたサイトです">
-    <meta property="og:site_name" content="コーティング実習：Flexとかレスポンシブデザインの練習です。">
-    <meta property="og:image" content="https://yamame1212.github.io/images/totoro050.jpg">
-
-    <title>コーディング実習</title>
+    <meta name="format-detection" content="email=no,telephone=no,address=no">
+    <meta name=”robots” content=”none” >
+    <title>KUTANI Art Plan</title>
     <link rel="stylesheet" type="text/css" href="./css/reset.css">
+    <!-- FullCalendar -->
+    <!-- <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.5.1/main.min.css' rel='stylesheet' /> -->
+    <link href='./lib/fullcalendar/main.css' rel='stylesheet' />
+    <link href='./lib/fullcalendar/main.min.css' rel='stylesheet' />
     <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <!-- FullCalendar -->
+    <!-- <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.5.1/main.min.js'></script> -->
+    <script src='./lib/fullcalendar/main.js'></script>
+    <script src='./lib/fullcalendar/main.min.js'></script>
+    <script src="./js/javascript.js"></script>
+    <!-- dayGridのプラグインを取り込む -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var calendarEl = document.getElementById('calendar');
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'dayGridMonth'
+            });
+            calendar.render();
+        });
+
+    </script>
 </head>
 
 <body>
-    <div class="container">
+    <div class="wrapper">
         <header>
-            <div class="head1">
-                <div class="anime1"></div>
+            <div class="headArea">
+                <div class="headlogoArea">
+                    <a href="./index.html"><img class="headlogoP" src="./images/logo.svg"></a>
+                    <p class="headlogoT"><a href="./index.html">KUTANI Art Plan</a></p>
+                </div>
+                <button type="button" class="btn js-btn">
+                    <span class="btn-line"></span>
+                </button>
+                <div class="navArea">
+                    <ul id="navMenu" class="navBoxAll">
+                        <li class="navBox"><a id="nav1" href="./index.html">Home</a></li>
+                        <li class="navBox"><a id="nav2" href="./menu/menu.html">LessonMenu</a></li>
+                        <li class="navBox"><a id="nav3" href="./access/access.html">Access</a></li>
+                        <li class="navBox"><a id="nav4" href="./reserve/reserve.html">Reservation</a></li>
+                    </ul>
+                </div>
             </div>
-            <nav>
-                <div class="nav_btn">1 </div>
-                <div class="nav_btn">2</div>
-                <div class="nav_btn">3</div>
-                <div class="nav_btn">4</div>
-                <div class="nav_btn">5</div>
-                <div class="nav_btn">6</div>
-            </nav>
+            <!-- パンくずリスト -->            
+            <ol class="breadcrumbs">                
+                <li><a href="./index.html">■ Home</a></li>
+            </ol>
         </header>
-        <main>
-            <div class="content_all">
-                <div class="content_left">
-                        <div class="boxA">上</div>
-                        <div class="boxA">下</div>
-                </div>
-                <div class="content_right">
-                    <div class="boxB">1</div>
-                    <div class="boxB">2</div>
-                    <div class="boxB">3</div>
-                    <div class="boxB">4</div>
-                    <div class="boxB">5</div>
-                    <div class="boxB">6</div>
-                </div>
+        <div class="kyevisual">
+            <div class="slider">
+                <div class="image"></div>
+                <div class="image"></div>
+                <div class="image"></div>
             </div>
+        </div>
+        <main>
+            <section>
+                <h1>心華やぐ器 ～ 九谷焼 ～ を求めて</h1>
+                <div class="textBox">
+                    <p>「九谷焼（くたにやき）」は、<label class="numberF">360</label>年もの歴史がある伝統のある焼き物で、</p>
+                    <p>九谷五彩と呼ばれる青、黄、紺青、紫、赤の伝統色に、黒を加えた<label class="numberF">6</label>色で彩られた色絵磁器です。
+                    </p>
+                    <p>KUTANI Art Plan は見て・触れて、金沢のアートを体感できる施設です。</p>
+                    <p>九谷焼の体験メニューのコースをとり揃えています。</p>
+                </div>
+            </section>
+            <section>
+                <h1>体験メニュー</h1>
+                <div class="lessonBoxAll">
+                    <div class="lessonBox">
+                        <a href="./menu/menu.html#sec1">
+                            <p>九谷五彩体験</p>
+                            <img class="lessonPhoto" src="./images/blue2.jpg">
+                        </a>
+                    </div>
+                    <div class="lessonBox">
+                        <a href="./menu/menu.html#sec2">
+                            <p>赤絵金彩体験</p>
+                            <img src="./images/red3.jpg">
+                        </a>
+                    </div>
+                    <div class="lessonBox">
+                        <a href="./menu/menu.html#sec3">
+                            <P>貼り絵体験</P>
+                            <img src="./images/kutani1.jpg">
+                        </a>
+                    </div>
+                    <div class="lessonBox">
+                        <a href="./menu/menu.html#sec4">
+                            <p>電動ろくろ体験</p>
+                            <img src="./images/rokuro.jpg">
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <h1>ニュース</h1>
 
+
+                <div class="newsBox">
+                    <div class="newsText">
+                        <p class="titleT">
+                            <strong>【</strong>
+                            陶芸体験工房がNEW OPEN
+                            <strong>】</strong>
+                        </p>
+                        <p><label class="numberF">2021年1月15日</label>に陶芸体験工房がOPENしました。さまざまな九谷焼体験をすることができます！</p>
+                    </div>
+                    <div class="newsImage">
+                        <img src="./images/gaikan1.jpg">
+                    </div>
+                </div>
+                <div class="newsBox">
+                    <div class="newsText">
+                        <p class="titleT">
+                            <strong>【</strong>
+                            ショップが開設
+                            <strong>】</strong>
+                        </p>
+                        <p><label
+                                class="numberF">2021年2月1日</label>にショップを開設しました。いくつかの商品をご購入できるようになりました。お買い忘れのものがありましたら、ぜひご利用ください。
+                        </p>
+
+                    </div>
+                    <div class="newsImage">
+                        <img src="./images/gaikan2.jpg">
+                    </div>
+                </div>
+            </section>
+            <section>
+                <h1>アクセス</h1>
+                <div class="accessBox">
+                    <div class="accessT">
+                        <p class="titleT">
+                            <strong>【</strong>
+                            KUTANI Art Plan
+                            <strong>】</strong>
+                        </p>
+                        <p><label class="numberF">920-0865</label> 石川県金沢市長町
+                            <label class="numberF">2-6-51</label>
+                        </p>
+                        <table class="opentime">
+                            <tr>
+                                <td>OPEN</td>
+                                <td>:</td>
+                                <td><label class="numberF">11:00-17:00</label></td>
+                            </tr>
+                            <tr>
+                                <td>CLOSE</td>
+                                <td>:</td>
+                                <td>水曜日・木曜日</td>
+                            </tr>
+                            <tr>
+                                <td>TEL</td>
+                                <td>:</td>
+                                <td><label class="numberF">076-231-4756</label></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div id="calendar" class="calendar"></div>
+                </div>
+            </section>           
         </main>
         <footer>
-
-            <div class="foot">
-                <div class="boxC">中央</div>
-
+            <div class="footerArea">
+                <div class="footerlogoArea">
+                    <a href="./index.html"><img class="footerlogoP" src="./images/logo.svg"></a>
+                    <p class="footerlogoT"><a href="./index.html">KUTANI Art Plan</a></p>
+                </div>
+                <div class="copyright">
+                    <p class="numberF">Copyright (C) 2021 KUTANI Art Plan. All Right Reserved.</p>
+                </div>
             </div>
-
-
         </footer>
+        <!-- トップへ戻る -->
+        <div id="page_top"><a href="#">TOP</a></div>
     </div>
 </body>
 
