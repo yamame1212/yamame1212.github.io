@@ -879,10 +879,14 @@ td{
         text-align: center;
         
     }
+    .courceText{
+        margin-right: 0;
+    }
     .courcePhoto{
         flex:none;
         width:80%;
         height: 240px;
+        margin-bottom: 0;
     }
     
     .cTitle{
