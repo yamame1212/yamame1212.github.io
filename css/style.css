@@ -515,14 +515,15 @@ text-align: center;
 margin-bottom: var(--space1);
 }
 .accessImg{
-    display: flex;    
+    display: flex;   
+    width: 200px; 
+    height: 200px;   
     justify-content: center;  
     margin-bottom: var(--space1);
-    background-color: red;
+    margin-left:auto;
+    margin-right:auto;    
 }
-.accessImg img{
-   width: 30%;
-}
+
 /* ------------------------------------------- */
 /*  予約　　　　　　　　　　　　　　　　　　　　　 */
 /* ------------------------------------------- */
