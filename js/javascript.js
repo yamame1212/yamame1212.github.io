@@ -146,15 +146,13 @@ $(function(){
     // スライダー
     //----------------------
     $(function () {
-
-        function sliderSet(setNum) {
-        
-    // var setNum = 1;
-    var list = $('#list' + setNum);           
+   
+    // var list = $('.list'),           
+    var list = $('#list1'),           
     num = list.children().length, 
     counter = 0,                  
     running = false;              
-    
+   
         /* 最初に各.item の order に連番を振る*/
         for(var i = 0; i < num; i++){
         list.children().eq( i ).css('order', i );
@@ -194,12 +192,12 @@ $(function(){
     var setSlider = setInterval( slider, 4000);
     // タッチデバイスかどうか判定
     if('ontouchstart' in window){ 
-        // console.log(11111);
-        $('#buttons' + setNum).remove();   // タッチデバイスならボタンを消す
+        console.log(11111);
+        $('.buttons').remove();   // タッチデバイスならボタンを消す
         var startX,               // タッチ開始位置
             endX,                 // タッチ終了位置
             difX;                 // 開始位置と終了位置の差分
-        $('#view' + setNum).on('touchstart', function(e){
+        $('.view').on('touchstart', function(e){
             startX = e.originalEvent.changedTouches[0].pageX;
             endX = startX;          // touchmoveが発生しないケースに備えてstartXを代入
         }).on('touchmove', function(e){
@@ -214,25 +212,18 @@ $(function(){
             }
         });
     }else{
-        //   console.log(22222);
+          console.log(22222);
         // click
-        $('.btn'+setNum).on('click', function(){
+        $('.button').on('click', function(){
           if( running ) return;                          // フラグ on なら処理を抜ける
           clearInterval( setSlider );                    // 繰り返しを止める
-          var flag = $(this).is('#prev' + setNum) ? true : false; // 逆回しなら true を渡す
+          var flag = $(this).is('.prev') ? true : false; // 逆回しなら true を渡す
           slider( flag );　                              // slider を1回実行
         });
       }
 
-    }  //sliderSet end 
 
-    sliderSet(1);
-    sliderSet(2);
-       
 });
-
-
-
 
 
 });
