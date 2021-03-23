@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="金沢の伝統を使う、贈る、作る。九谷焼のデザインアートを体験することができます。金沢のおみやげや思い出作りにも。">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="email=no,telephone=no,address=no">
+    <title>KUTANI Art Plan</title>
+    <link rel="stylesheet" type="text/css" href="../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/reserve.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="../js/javascript.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="headArea">
+                <div class="headlogoArea">
+                    <img class="headlogoP" src="../images/logo.svg">              
+                    <p class="headlogoT">KUTANI Art Plan</p>
+                  </div>      
+                <button type="button" class="btn js-btn">
+                    <span class="btn-line"></span>
+                </button>
+                <div class="navArea">
+                    <ul id="navMenu" class="navBoxAll">
+                        <li class="navBox"><a id="nav1" href="../index.html">Home</a></li>
+                        <li class="navBox"><a id="nav2" href="../menu/menu.html">LessonMenu</a></li>
+                        <li class="navBox"><a id="nav3" href="../access/access.html">Access</a></li>
+                        <li class="navBox"><a id="nav4" href="./reserve.html">Reservation</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- パンくずリスト -->
+            <ol class="breadcrumbs">
+                <li><a href="../index.html">■ Home</a></li>
+                <li><a href="./reserve.html">Reservation</a></li>
+            </ol>
+        </header>
+        <main>
+            <section>
+                <div class="backBtn">                    
+                    <input type="button" value="戻る" onclick="location.href='../reserve/reserve.html'">
+                </div>
+                <div class="point">
+                    <p class="colorA">入力</p>
+                    <p class="colorA">確認</p>
+                    <p class="colorB">完了</p>
+                </div>
+                <div>
+                    <h1>内容の確認</h1>
+                </div>
+                <div class="confirmBox">
+                    <table class="confirmTable">
+                        <tr>
+                            <th>体験日時</th>
+
+                            <td><label id="dayModal" class="modalLabel"></label></td>
+                        </tr>
+                        <tr>
+                            <th>人数</th>
+                            <td><label id="cntModal"></label></td>
+                        </tr>
+                        <tr>
+                            <th>お名前</th>
+                            <td><label id="nameModal"></label></td>
+                        </tr>
+                        <tr>
+                            <th>ふりがな</th>
+                            <td><label id="furiganaModal"></label></td>
+                        </tr>
+                        <tr>
+                            <th>メールアドレス</th>
+                            <td><label id="mailModal"></label></td>
+                        </tr>
+                        <tr>
+                            <th>電話番号</th>
+                            <td><label id="telModal"></label></td>
+                        </tr>                        
+                    </table>
+                </div>
+                <div class="btnAll">
+                    <input id="reserveBtn2" class="reserveBtn" type="button" value="予約する"
+                        onclick="location.href='../reserve/completed.html'">
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="footerlogoArea">
+                <img class="footerlogoP" src="../images/logo.svg">
+                <p class="footerlogoT">KUTANI Art Plan</p>
+              </div>              
+              <div class="copyright">
+                <p class="numberF">Copyright (C) 2021 KUTANI Art Plan. All Right Reserved.</p>
+              </div>  
+            </div>
+        </footer>
+        <!-- トップへ戻る -->
+        <div id="page_top"><a href="#">TOP</a></div>
+    </div>
+</body>
+
+</html>

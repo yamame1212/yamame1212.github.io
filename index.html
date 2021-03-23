@@ -4,275 +4,189 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="ポートフォリオ">
+    <meta name="description" content="金沢の伝統を使う、贈る、作る。九谷焼のデザインアートを体験することができます。金沢のおみやげや思い出作りにも。">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="format-detection" content="email=no,telephone=no,address=no">
-    <title>Portfolio</title>
+    <title>KUTANI Art Plan</title>
     <link rel="stylesheet" type="text/css" href="./css/reset.css">
+    <!-- FullCalendar -->
+    <!-- <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.5.1/main.min.css' rel='stylesheet' /> -->
+    <link href='./lib/fullcalendar/main.css' rel='stylesheet' />
+    <link href='./lib/fullcalendar/main.min.css' rel='stylesheet' />
     <link rel="stylesheet" type="text/css" href="./css/style.css">
-    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <!-- FullCalendar -->
+    <!-- <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.5.1/main.min.js'></script> -->
+    <script src='./lib/fullcalendar/main.js'></script>
+    <script src='./lib/fullcalendar/main.min.js'></script>
     <script src="./js/javascript.js"></script>
+    <!-- dayGridのプラグインを取り込む -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var calendarEl = document.getElementById('calendar');
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'dayGridMonth'
+            });
+            calendar.render();
+        });
+
+    </script>
 </head>
 
 <body>
     <div class="wrapper">
         <header>
-            <div>
-                <img class="logo" src="./images/logo.svg">
+            <div class="headArea">
+                <div class="headlogoArea">
+                    <a href="./index.html"><img class="headlogoP" src="./images/logo.svg"></a>
+                    <p class="headlogoT"><a href="./index.html">KUTANI Art Plan</a></p>
+                </div>
+                <button type="button" class="btn js-btn">
+                    <span class="btn-line"></span>
+                </button>
+                <div class="navArea">
+                    <ul id="navMenu" class="navBoxAll">
+                        <li class="navBox"><a id="nav1" href="./index.html">Home</a></li>
+                        <li class="navBox"><a id="nav2" href="./menu/menu.html">LessonMenu</a></li>
+                        <li class="navBox"><a id="nav3" href="./access/access.html">Access</a></li>
+                        <li class="navBox"><a id="nav4" href="./reserve/reserve.html">Reservation</a></li>
+                    </ul>
+                </div>
             </div>
-            <div>
-                <a href="./index.html">
-                    <p class="logoText">Portfolio</p>
-                </a>
-            </div>
-            <button type="button" class="btn js-btn">
-                <span class="btn-line"></span>
-            </button>
-            <nav class="navBoxAll">
-                <a href="#about">about me</a>
-                <a href="#works">works</a>
-                <a href="#skill">skill</a>
-                <a href="#contact">contact</a>
-            </nav>
+            <!-- パンくずリスト -->            
+            <ol class="breadcrumbs">                
+                <li><a href="./index.html">■ Home</a></li>
+            </ol>
         </header>
+        <div class="kyevisual">
+            <div class="slider">
+                <div class="image"></div>
+                <div class="image"></div>
+                <div class="image"></div>
+            </div>
+        </div>
         <main>
-            <div class="kyevisual">
-                <div class="backL">
-                    <div>
-                        <p class="title">Portfolio</p>
-                        <p class="titleName">Sayaka Yamashita</p>
+            <section>
+                <h1>心華やぐ器 ～ 九谷焼 ～ を求めて</h1>
+                <div class="textBox">
+                    <p>「九谷焼（くたにやき）」は、<label class="numberF">360</label>年もの歴史がある伝統のある焼き物で、</p>
+                    <p>九谷五彩と呼ばれる青、黄、紺青、紫、赤の伝統色に、黒を加えた<label class="numberF">6</label>色で彩られた色絵磁器です。
+                    </p>
+                    <p>KUTANI Art Plan は見て・触れて、金沢のアートを体感できる施設です。</p>
+                    <p>九谷焼の体験メニューのコースをとり揃えています。</p>
+                </div>
+            </section>
+            <section>
+                <h1>体験メニュー</h1>
+                <div class="lessonBoxAll">
+                    <div class="lessonBox">
+                        <a href="./menu/menu.html#sec1">
+                            <p>九谷五彩体験</p>
+                            <img class="lessonPhoto" src="./images/blue2.jpg">
+                        </a>
+                    </div>
+                    <div class="lessonBox">
+                        <a href="./menu/menu.html#sec2">
+                            <p>赤絵金彩体験</p>
+                            <img src="./images/red3.jpg">
+                        </a>
+                    </div>
+                    <div class="lessonBox">
+                        <a href="./menu/menu.html#sec3">
+                            <P>貼り絵体験</P>
+                            <img src="./images/kutani1.jpg">
+                        </a>
+                    </div>
+                    <div class="lessonBox">
+                        <a href="./menu/menu.html#sec4">
+                            <p>電動ろくろ体験</p>
+                            <img src="./images/rokuro.jpg">
+                        </a>
                     </div>
                 </div>
-                <div class="kyeImg"><img src="./images/pink2.jpg"></div>
-            </div>
-            <section id="about">
-                <div class="aboutBox">
-                    <h1>About me</h1>
-                    <img src="./images/1.jpg">
-                    <div class="self">
-                        <p>山下　沙耶花</p>
-                        <p>
-                            自己紹介ここに書きます
+            </section>
+            <section>
+                <h1>ニュース</h1>
+
+
+                <div class="newsBox">
+                    <div class="newsText">
+                        <p class="titleT">
+                            <strong>【</strong>
+                            陶芸体験工房がNEW OPEN
+                            <strong>】</strong>
                         </p>
-                        <p>経歴等
-                            いいいいいいいいいいいいいいいいいいいいいいいiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii
-                            あああああああああああああああああaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+                        <p><label class="numberF">2021年1月15日</label>に陶芸体験工房がOPENしました。さまざまな九谷焼体験をすることができます！</p>
+                    </div>
+                    <div class="newsImage">
+                        <img src="./images/gaikan1.jpg">
                     </div>
                 </div>
-            </section>
-            <section id="works">
-                <div class="workBox">
-                    <h1>Works</h1>
-                    <div>
-                        <div class="wBox line1">
-                            <div>
-                                <a class="js-modal-open1" href="">
-                                    <img src="./images/logo.png">
-                                    <p>ロゴ</p>
-                                </a>
-                            </div>
-                            <div><a class="js-modal-open2" href=""><img src="./images/blue2-ore.jpg">
-                                    <p>名刺</p>
-                                </a></div>
-                            <div><a class="js-modal-open3" href=""><img src="./images/blue3-ore.jpg">
-                                    <p>リーフレット</p>
-                                </a></div>
-                        </div>
-                        <div class="wBox">
-                            <div><a class="js-modal-open4" href=""><img src="./images/pink1-bl.jpg">
-                                    <p>パッケージ</p>
-                                </a></div>
-                            <div><a class="js-modal-open5" href=""><img src="./images/pink2.jpg">
-                                    <p>チラシ</p>
-                                </a></div>
-                            <div><a class="js-modal-open6" href=""><img src="./images/red-wh.jpg">
-                                    <p>WEB</p>
-                                </a></div>
-                        </div>
-                    </div>
-                </div>
-                <!-- モーダル -->
-                <div class="modal js-modal1">
-                    <div class="modal__bg js-modal-close"></div>
-                    <div class="modal__content">
-                        <img src="./images/logo.png">
-                        <p>ロゴ　ここに説明入れる</p>
-                        <div class="closeBtn">
-                            <a class="js-modal-close" href="">×</a>
-                        </div>
-                    </div>
-                    <!--modal__inner-->
-                </div>
-                <!--modal-->
-                <div class="modal js-modal2">
-                    <div class="modal__bg js-modal-close"></div>
-                    <div class="modal__content">
-                        <img src="./images/blue2-ore.jpg">
-                        <p>名刺　ここに説明を入れる予定 </p>
-                        <div class="closeBtn">
-                            <a class="js-modal-close" href="">×</a>
-                        </div>
-                    </div>
-                    <!--modal__inner-->
-                </div>
-                <!--modal-->
-                <div class="modal js-modal3">
-                    <div class="modal__bg js-modal-close"></div>
-                    <div class="modal__content">
-                        <img src="./images/blue3-ore.jpg">
-                        <p>リーフレット　ここに説明を入れる予定 </p>
-                        <div class="closeBtn">
-                            <a class="js-modal-close" href="">×</a>
-                        </div>
-                    </div>
-                    <!--modal__inner-->
-                </div>
-                <!--modal-->
-                <div class="modal js-modal4">
-                    <div class="modal__bg js-modal-close"></div>
-                    <div class="modal__content">
-                        <img src="./images/pink1-bl.jpg">
-                        <p>パッケージ　ここに説明を入れる予定 </p>
-                        <div class="closeBtn">
-                            <a class="js-modal-close" href="">×</a>
-                        </div>
-                    </div>
-                    <!--modal__inner-->
-                </div>
-                <!--modal-->
-                <div class="modal js-modal5">
-                    <div class="modal__bg js-modal-close"></div>
-                    <div class="modal__content">
-                        <img src="./images/pink2.jpg">
-                        <p>チラシ　ここに説明を入れる予定 </p>
-                        <div class="closeBtn">
-                            <a class="js-modal-close" href="">×</a>
-                        </div>
-                    </div>
-                    <!--modal__inner-->
-                </div>
-                <!--modal-->
-                <div class="modal js-modal6">
-                    <div class="modal__bg js-modal-close"></div>
-                    <div class="modal__content">
-                        <img src="./images/red-wh.jpg">
-                        <p>WEBサイト　ここに説明を入れる予定 </p>
-                        <div class="closeBtn">
-                            <a class="js-modal-close" href="">×</a>
-                        </div>
-                    </div>
-                    <!--modal__inner-->
-                </div>
-                <!--modal-->
-            </section>
-            <section id="skill">
-                <div>
-                    <h1>Skill</h1>
-                    <div class="skillBox">
-                        <div class="btnBox">
-                            <p>Illustrator</p>
-                        </div>
-                        <div class="btnBox">
-                            <p>Photoshop</p>
-                        </div>
-                        <div class="btnBox">
-                            <p>Dreamweaver</p>
-                        </div>
-                        <div class="btnBox">
-                            <p>AfterEffect</p>
-                        </div>
-                        <div class="btnBox">
-                            <p>HTML</p>
-                        </div>
-                        <div class="btnBox">
-                            <p>CSS</p>
-                        </div>
-                        <div class="btnBox">
-                            <p>javsqlipt</p>
-                        </div>
-                        <div class="btnBox">
-                            <p>jQuery</p>
-                        </div>
-                        <div class="btnBox">
-                            <p>VB.NET</p>
-                        </div>
-                        <div class="btnBox">
-                            <p>C#</p>
-                        </div>
-                        <div class="btnBox">
-                            <p>SQL</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section id="contact">
-                <div>
-                    <h1>Contact</h1>
-                    <form>
-                        <div class="A">
-                            <div class="setbox">
-                                <p>名前</p>
-                                <p class="textSd">*</p>
-                            </div>
-                            <input name="name">
-                        </div>
-                        <div class="A">
-                            <div class="setbox">
-                                <p>メール</p>
-                                <p class="textSd">*</p>
-                            </div>
-                            <input name="mail">
-                        </div>
-                        <div class="A">
-                            <div class="setbox">
-                                <p>メッセージ</p>
-                                <p class="textSd">*</p>
-                            </div>
-                            <textarea name="message"></textarea>
-                        </div>
-                        <div class="A">
-                            <label>
-                                <input class="chk" name="confirm" type="checkbox">
-                                <span>I agree to the Privacy Policy.</span>
-                            </label>
-                        </div>
-                        <div class="A">
-                            <button class="Block">
-                                <p>送信</p>
-                            </button>
-                        </div>
-                    </form>
+                <div class="newsBox">
+                    <div class="newsText">
+                        <p class="titleT">
+                            <strong>【</strong>
+                            ショップが開設
+                            <strong>】</strong>
+                        </p>
+                        <p><label
+                                class="numberF">2021年2月1日</label>にショップを開設しました。いくつかの商品をご購入できるようになりました。お買い忘れのものがありましたら、ぜひご利用ください。
+                        </p>
 
-                </div>
-            </section>
-            <div class="footerBox">
-                <div class="box">
-                    <div class="logo"><img src="./images/logo.svg"></div>
-                    <p><i class="far fa-envelope"></i>: portfolio-yamashita@gmail.com</p>
-                    <p><i class="fas fa-mobile-alt"></i> : 0901231234</p>
-                    <div>
-                        <a href="https://twitter.com/?lang=ja" target="_blank"><i class="fab fa-twitter"></i></a>
-                        <a href="https://www.instagram.com/?hl=ja" target="_blank"><i class="fab fa-instagram"></i></a>
-                        <a href="https://ja-jp.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                    <div class="newsImage">
+                        <img src="./images/gaikan2.jpg">
                     </div>
                 </div>
-                <div class="box">
-                    <div><a href="#about">about me</a></div>
-                    <div><a href="#works">works</a></div>
-                    <div><a href="#skill">skill</a></div>
-                    <div><a href="#contact">contact</a></div>
+            </section>
+            <section>
+                <h1>アクセス</h1>
+                <div class="accessBox">
+                    <div class="accessT">
+                        <p class="titleT">
+                            <strong>【</strong>
+                            KUTANI Art Plan
+                            <strong>】</strong>
+                        </p>
+                        <p><label class="numberF">920-0865</label> 石川県金沢市長町
+                            <label class="numberF">2-6-51</label>
+                        </p>
+                        <table class="opentime">
+                            <tr>
+                                <td>OPEN</td>
+                                <td>:</td>
+                                <td><label class="numberF">11:00-17:00</label></td>
+                            </tr>
+                            <tr>
+                                <td>CLOSE</td>
+                                <td>:</td>
+                                <td>水曜日・木曜日</td>
+                            </tr>
+                            <tr>
+                                <td>TEL</td>
+                                <td>:</td>
+                                <td><label class="numberF">076-231-4756</label></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div id="calendar" class="calendar"></div>
                 </div>
-            </div>
-            <div id="page_top"><a href="#"></a></div>
-
+            </section>           
         </main>
         <footer>
-            <p>Copyright © 2021 SayakaYamashtia. All Rights Reserved.</p>
+            <div class="footerArea">
+                <div class="footerlogoArea">
+                    <a href="./index.html"><img class="footerlogoP" src="./images/logo.svg"></a>
+                    <p class="footerlogoT"><a href="./index.html">KUTANI Art Plan</a></p>
+                </div>
+                <div class="copyright">
+                    <p class="numberF">Copyright (C) 2021 KUTANI Art Plan. All Right Reserved.</p>
+                </div>
+            </div>
         </footer>
+        <!-- トップへ戻る -->
+        <div id="page_top"><a href="#">TOP</a></div>
     </div>
-
 </body>
 
 </html>
