@@ -13,8 +13,8 @@ body{
 
 .wrapper{
     max-width:1920px;
-    padding-right: 10px; 
-    padding-left:  10px; 
+    padding-right: 10px;
+    padding-left:  10px;
     margin: 0 auto;
 }
 
@@ -58,7 +58,7 @@ h1{
     margin-bottom: 20px;
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     letter-spacing: 10px;
-    
+
 }
 
 
@@ -66,6 +66,7 @@ header{
     position: sticky;
     top:0;
     z-index: 5;
+    
     width: 100%;
     height: 80px;
     display:flex;
@@ -73,7 +74,7 @@ header{
     align-items: center;
     padding: 0 20px;
     background-color: black;
-    color:white;    
+    color:white;
 }
 
 .logoText{
@@ -99,7 +100,7 @@ nav a:hover{
 }
 
 .kyeImg{
-    height: 700px;   
+    height: 700px;
    flex:2;
    /* object-fit: contain;
    width: 100%;
@@ -115,23 +116,23 @@ nav a:hover{
 .backL{
     flex:1;
     display: flex;
-    align-items: center;    
+    align-items: center;
     padding-left: 10px;
     background-color:var(--accent-color);
-    
+
 }
 .backL div{
     justify-content: center;
     align-items: center;
 }
 .title{
-    width: 100%;    
-    font-size: 500%;  
-    letter-spacing: 40px;  
+    width: 100%;
+    font-size: 500%;
+    letter-spacing: 40px;
     overflow: hidden;
     /* font-family:'Courier New', Courier, monospace; */
     letter-spacing:0.5em;
-    
+
 }
 .titleName{
     font-size:150%;
@@ -155,8 +156,8 @@ nav a:hover{
 
 .self p{
     text-align: center;
-    line-height: 1.5em;    
-    
+    line-height: 1.5em;
+
 }
 
 .workBox{
@@ -166,21 +167,21 @@ nav a:hover{
 }
 
 .wBox{
-    display: flex;           
+    display: flex;
     justify-content: center;
     /* background-color: violet; */
 }
 .wBox div{
     width: 200px;
     height: 200px;
-    margin:0 5px; 
+    margin:0 5px;
     /* background-color: yellowgreen; */
     overflow: hidden;
     border-radius: 50%;
     position: relative;
 }
 
-.wBox img:hover{   
+.wBox img:hover{
     transform: scale(1.1);	/*画像の拡大率*/
 	transition-duration: 0.3s;	/*変化に掛かる時間*/
     opacity: 0.5;
@@ -202,7 +203,7 @@ nav a:hover{
     object-fit:cover;
     width: 100%;
     height: 100%;
-    
+
 }
 .line1{
     margin-bottom: 10px;
@@ -257,7 +258,7 @@ textarea{
     padding: 20px;
     /* border-bottom: solid 1px black; */
     box-shadow:2px 2px 3px -3px black;
-    
+
 }
 .chk{
     width: 20px;
@@ -325,12 +326,12 @@ textarea{
       display: flex;
       flex-direction: column;
       margin: 40px;
-      
-  } 
+
+  }
   .box div{
       margin-bottom: 5px;
     }
-    
+
   .box p{
       margin-bottom: 5px;
   }
@@ -338,7 +339,7 @@ textarea{
   .box i{
             margin-right: 5px;
       text-align: center;
-      
+
   }
 
   .box a:hover{
@@ -351,7 +352,7 @@ textarea{
       text-align:center;
       background-color: black;
       color:white;
-      
+
     }
 footer p{
     padding-top: 15px;
@@ -383,7 +384,7 @@ footer p{
         width: 60%;
         display: flex;
     }
-    
+
     .modal__content img{
         flex:1;
         width:300px;
@@ -392,25 +393,25 @@ footer p{
         /* object-fit: contain; */
         object-fit: cover;
         /* background-color:wheat; */
-    }   
+    }
     .modal__content p{
         flex:1;
         height: 100%;
         margin-right: 20px;
         /* background-color:violet; */
     }
-    .closeBtn{        
+    .closeBtn{
         width: 40px;
         height: 40px;
         background-color: black;
         color:white;
-        padding: 10px 10px 10px 15px;        
+        padding: 10px 10px 10px 15px;
     }
 
 @media(max-width:500px){
 
         .wraper{
-            max-width: 500px;                         
+            max-width: 500px;
         }
 
         .kyevisual{
@@ -427,19 +428,19 @@ footer p{
             height: 150px;
         }
 
-        
+
               /* バーガーボタンの表示 */
     .btn {
-        /* ボタンの配置位置  */    
+        /* ボタンの配置位置  */
         position: fixed;
         top: 2%;
         right: 6.5%;
         /* ボタンの大きさ  */
         width: 50px;
-        height: 50px;        
+        height: 50px;
         /* 最前面に */
-        z-index: 100;    
-        
+        z-index: 100;
+
     }
     .btn-line {
         display: block;
@@ -467,7 +468,7 @@ footer p{
         /* 下の線の位置 */
         transform: translateY(15px);
     }
-       
+
     /***** メニューオープン時 　×ボタンにする*****/
     .btn-line.open {
         background-color: transparent;
@@ -495,27 +496,27 @@ footer p{
     }
    .btn{
        display: block;
-       background-color:var(--accent-color);   
-       z-index:200;    
+       background-color:var(--accent-color);
+       z-index:200;
    }
    .btn-line{
        background-color:white;
    }
-    .navBoxAll{        
+    .navBoxAll{
         position: fixed;
-        width: 80%;        
+        width: 80%;
         right: 2%;
         top:-50%;
         height: 30vh;
         margin-left: auto;
         display: flex;
-        flex-direction: column;                   
+        flex-direction: column;
         transition: .3s;
         justify-content: center;
         align-items: center;
-        z-index: 100; 
+        z-index: 100;
         background-color:var(--sub-rgba-color);
-        
+
     }
     .navBoxAll a {
         width: 100%;
@@ -527,14 +528,14 @@ footer p{
         border-bottom: dotted 1px white;
         padding-left: 20px;
     }
-    
+
     .navBoxAll.open {
         top:0;
     }
 
 .backL{
     width: 100%;
-    
+
 
 }
 
